@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				finance: {
+					primary: '#0066FF',
+					secondary: '#E9F0FF',
+					accent: '#004CBB',
+					muted: '#F7FAFF',
+					border: '#DCE6F9'
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1', transform: 'translateY(0)' },
+					'100%': { opacity: '0', transform: 'translateY(10px)' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-out-right': {
+					'0%': { transform: 'translateX(0)', opacity: '1' },
+					'100%': { transform: 'translateX(100%)', opacity: '0' }
+				},
+				'typing': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
+				},
+				'blink': {
+					'50%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out forwards',
+				'fade-out': 'fade-out 0.3s ease-out forwards',
+				'slide-in-right': 'slide-in-right 0.4s ease-out forwards',
+				'slide-out-right': 'slide-out-right 0.4s ease-out forwards'
+			},
+			boxShadow: {
+				'chat': '0 4px 20px rgba(0, 0, 0, 0.08)',
+				'chat-button': '0 4px 15px rgba(0, 102, 255, 0.25)'
 			}
 		}
 	},
